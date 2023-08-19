@@ -28,6 +28,7 @@ struct MainTabView: View {
                 .tag(1)
         }
         .navigationBarBackButtonHidden()
+        .background(Color("BGray"))
     }
 }
 

@@ -28,6 +28,7 @@ struct RoleSelectionView: View {
                 
                 Spacer()
             }
+            .frame(width: deviceWidth, height: deviceHeight)
         }
     }
 }
