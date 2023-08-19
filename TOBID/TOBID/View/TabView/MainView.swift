@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: - 메인(내 코스) 뷰
 struct MainView: View {
     var body: some View {
         Text("메인뷰")

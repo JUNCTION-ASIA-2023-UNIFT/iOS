@@ -7,25 +7,16 @@
 
 import SwiftUI
 
+// MARK: - 사용하지 않는 뷰
 struct ContentView: View {
-    @State var selectedTab = 0
-    
     var body: some View {
-        TabView(selection: $selectedTab) {
-            MainView()
-                .tabItem {
-                    Image(systemName: "flag.fill")
-                    Text("내 루트")
-                }
-                .tag(0)
-            
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("마이페이지")
-                }
-                .tag(1)
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundColor(.accentColor)
+            Text("Hello, world!")
         }
+        .padding()
     }
 }
 

@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+// MARK: - 마이페이지 뷰
+struct MyPageView: View {
     var body: some View {
         Text("프로필뷰")
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct MyPageView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        MyPageView()
     }
 }
