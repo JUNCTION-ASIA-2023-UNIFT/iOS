@@ -10,14 +10,11 @@ import SwiftUI
 // MARK: - 마이페이지 뷰
 struct MyPageView: View {
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ScrollView() {
                 VStack(spacing:0) {
-                    Spacer()
-                    Rectangle()
-                        .frame(width: 50, height: 50)
-                        .foregroundColor(.black)
-                    RecommendBannerView(headline: "나의 입찰 현황")
+                    Image("logo")
+                    RecommendBannerView(headline: "My bidding status")
                         .padding(.top, 31)
                     BidderListTob3View()
                         .padding(.top, 34)
@@ -25,15 +22,14 @@ struct MyPageView: View {
                         .padding(.top, 59)
                     Spacer()
                 }
-                .frame(width: deviceWidth)
-                .padding(18)
+                .frame(width: deviceWidth, height: 761)
                 
             }
             .background(Color("BGray"))
+            
         }
-        
+        .frame(width: deviceWidth, height: 761)
     }
-        
 }
 
 struct BidListArea: View {
@@ -41,7 +37,6 @@ struct BidListArea: View {
     @State var detailViewActive: Bool = false
     
     var body: some View {
-        
         if hasBidList {
             VStack(spacing: 0) {
                 HStack {
@@ -60,9 +55,9 @@ struct BidListArea: View {
                     }
                     Spacer()
                     VStack(spacing:21) {
-                        Text("최우영 기사님")
-                        Text("김영빈 기사님")
-                        Text("김재령 기사님")
+                        Text("Driver Choi")
+                        Text("Driver Kim")
+                        Text("Driver Jae")
                     }
                     .foregroundColor(Color("DarkGray"))
                     Spacer()
@@ -73,7 +68,7 @@ struct BidListArea: View {
                 
                 NavigationLink(destination: MyPageDetailView(detailViewActive: $detailViewActive),
                                isActive: $detailViewActive) {
-                    Text("지금 체결하러 가기 \(Image(systemName: "chevron.forward"))")
+                    Text("Sign now \(Image(systemName: "chevron.forward"))")
                 }
             }
         } else {
@@ -89,7 +84,6 @@ struct BidListArea: View {
                 Text("There's no bidding status.")
             }
         }
-        
     }
 }
 

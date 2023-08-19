@@ -30,9 +30,9 @@ struct MyPageDetailView: View {
               Text("Pay at the lowest price")
             }
             .background(Color("AccentColor"))
+            .frame(width: 340)
         }
-        .frame(width: deviceWidth, height: deviceHeight)
-        .padding(18)
+        .frame(width: deviceWidth, height: 761)
         .background(Color("BGray"))
         
         
