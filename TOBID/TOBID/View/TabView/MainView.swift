@@ -16,15 +16,22 @@ struct MainView: View {
     var body: some View {
         VStack {
             VStack {
-                Text("앱로고")
-                Text("코스 추천 카테고리 뷰")
+                Spacer()
+                Rectangle()
+                    .frame(width: 50, height: 50)
+                    .foregroundColor(.black)
+                Spacer()
+                RecommendBannerView(headline: "이런 코스는 어떠세요?")
             }
             .frame(width: deviceWidth, height: deviceHeight*0.300)
-            .background(.yellow)
+            .padding(18)
+            .background(Color("BGray"))
             
             MapView(coordinate: CLLocationCoordinate2D(latitude: 35.210871, longitude: 129.068713))
                 .padding(.horizontal, 15)
+                .padding(.bottom, 144)
         }
+        .frame(width: deviceWidth, height: 761)
     }
 }
 

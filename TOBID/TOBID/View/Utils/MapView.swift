@@ -18,6 +18,8 @@ struct MapView: View {
             .onAppear {
                 setRegion(coordinate)
             }
+            .frame(width: 360, height: 400)
+            .background(Color("BGray"))
     }
     
     private func setRegion(_ coordinate: CLLocationCoordinate2D) {
