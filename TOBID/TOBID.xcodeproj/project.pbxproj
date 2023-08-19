@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D54B37C2A911592000B0A90 /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54B37B2A911592000B0A90 /* CourseListView.swift */; };
+		7D54B37E2A91163D000B0A90 /* BidderListTob3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54B37D2A91163D000B0A90 /* BidderListTob3View.swift */; };
 		B84948A22A90D5A00013E150 /* RecommendBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84948A12A90D5A00013E150 /* RecommendBannerView.swift */; };
 		B88387AC2A90801C007633B4 /* TOBIDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88387AB2A90801C007633B4 /* TOBIDApp.swift */; };
 		B88387AE2A90801C007633B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88387AD2A90801C007633B4 /* ContentView.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D54B37B2A911592000B0A90 /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
+		7D54B37D2A91163D000B0A90 /* BidderListTob3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidderListTob3View.swift; sourceTree = "<group>"; };
 		B84948A12A90D5A00013E150 /* RecommendBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendBannerView.swift; sourceTree = "<group>"; };
 		B88387A82A90801C007633B4 /* TOBID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOBID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B88387AB2A90801C007633B4 /* TOBIDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOBIDApp.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 			children = (
 				B88387C72A90955D007633B4 /* MapView.swift */,
 				B84948A12A90D5A00013E150 /* RecommendBannerView.swift */,
+				7D54B37B2A911592000B0A90 /* CourseListView.swift */,
+				7D54B37D2A91163D000B0A90 /* BidderListTob3View.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -184,11 +190,13 @@
 			files = (
 				B88387C82A90955D007633B4 /* MapView.swift in Sources */,
 				B88387BD2A9084CA007633B4 /* MyPageView.swift in Sources */,
+				7D54B37E2A91163D000B0A90 /* BidderListTob3View.swift in Sources */,
 				B84948A22A90D5A00013E150 /* RecommendBannerView.swift in Sources */,
 				B88387AE2A90801C007633B4 /* ContentView.swift in Sources */,
 				B88387BB2A9084C2007633B4 /* MainView.swift in Sources */,
 				B88387C22A908D92007633B4 /* RoleSelectionView.swift in Sources */,
 				B88387AC2A90801C007633B4 /* TOBIDApp.swift in Sources */,
+				7D54B37C2A911592000B0A90 /* CourseListView.swift in Sources */,
 				B88387CC2A90B5BD007633B4 /* UnityView.swift in Sources */,
 				B88387C02A908D2B007633B4 /* MainTabView.swift in Sources */,
 			);

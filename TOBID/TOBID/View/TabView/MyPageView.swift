@@ -10,41 +10,25 @@ import SwiftUI
 // MARK: - 마이페이지 뷰
 struct MyPageView: View {
     var body: some View {
-        VStack {
-            Spacer()
-            Rectangle()
-                .frame(width: 50, height: 50)
-                .foregroundColor(.black)
-            RecommendBannerView(headline: "나의 입찰 현황")
-            
-            VStack(alignment: .leading, spacing: 0) {
-                
-                HStack(spacing: 0) {
-                    Text("현재 가장 낮은 가격에 \n입찰하신 기사님들이에요.")
-                        .font(.system(size: 18))
-                    .padding(.bottom, 16)
-                    Image("coin")
-                        .offset(x:2, y:2)
-                }
+        ScrollView() {
+            VStack(spacing:0) {
+                Spacer()
                 Rectangle()
-                    .frame(width: 350, height: 200)
-                    .foregroundColor(Color.white)
-                    .opacity(0.4)
-                    .border(.white, width:2)
-                    .cornerRadius(10)
-                    .overlay{
-                        BidListArea()
-                    }
-                
+                    .frame(width: 50, height: 50)
+                    .foregroundColor(.black)
+                RecommendBannerView(headline: "나의 입찰 현황")
+                    .padding(.top, 31)
+                BidderListTob3View()
+                    .padding(.top, 34)
+                CourseListView()
+                    .padding(.top, 59)
+                Spacer()
             }
-            .padding(.top, 34)
+            .frame(width: deviceWidth)
+            .padding(18)
             
-            Spacer()
         }
-        .frame(width: deviceWidth)
-        .padding(18)
         .background(Color("BGray"))
-
     }
         
 }
