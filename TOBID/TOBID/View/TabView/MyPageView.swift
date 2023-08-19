@@ -26,15 +26,14 @@ struct MyPageView: View {
             }
             .frame(width: deviceWidth)
             .padding(18)
-            
         }
         .background(Color("BGray"))
     }
-        
 }
 
 struct BidListArea: View {
     @State var hasBidList = true
+    @State var detailViewActive: Bool = false
     
     var body: some View {
         
@@ -67,11 +66,10 @@ struct BidListArea: View {
                     .frame(width: 320)
                     .padding()
                 
-                Button {
-                } label: {
-                  Text("지금 체결하러 가기 \(Image(systemName: "chevron.forward"))")
+                NavigationLink(destination: MyPageDetailView(detailViewActive: $detailViewActive),
+                               isActive: $detailViewActive) {
+                    Text("지금 체결하러 가기 \(Image(systemName: "chevron.forward"))")
                 }
-                .buttonStyle(.borderless)
             }
         } else {
             VStack(spacing:0) {
