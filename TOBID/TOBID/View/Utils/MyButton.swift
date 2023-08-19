@@ -10,7 +10,7 @@ import SwiftUI
 struct MyButton: View {
     let title: String
     let enabled: Bool
-    let width: CGFloat = 340
+    let width: CGFloat
     
     var body: some View {
         ZStack {
@@ -29,6 +29,6 @@ struct MyButton: View {
 
 struct MyButton_Previews: PreviewProvider {
     static var previews: some View {
-        MyButton(title: "버튼", enabled: true)
+        MyButton(title: "버튼", enabled: true, width: 340)
     }
 }

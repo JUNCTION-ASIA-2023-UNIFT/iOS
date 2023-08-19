@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B81B2A3A2A9117D80066AB0E /* ItineraryRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81B2A392A9117D80066AB0E /* ItineraryRegisterView.swift */; };
 		B81B2A3C2A912F340066AB0E /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81B2A3B2A912F340066AB0E /* MyButton.swift */; };
+		B81B2A3E2A91342C0066AB0E /* MyViewBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81B2A3D2A91342C0066AB0E /* MyViewBox.swift */; };
+		B81B2A402A9135CE0066AB0E /* ImojiCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81B2A3F2A9135CE0066AB0E /* ImojiCircle.swift */; };
 		B84948A22A90D5A00013E150 /* RecommendBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84948A12A90D5A00013E150 /* RecommendBannerView.swift */; };
 		B88387AC2A90801C007633B4 /* TOBIDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88387AB2A90801C007633B4 /* TOBIDApp.swift */; };
 		B88387AE2A90801C007633B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88387AD2A90801C007633B4 /* ContentView.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		B81B2A392A9117D80066AB0E /* ItineraryRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryRegisterView.swift; sourceTree = "<group>"; };
 		B81B2A3B2A912F340066AB0E /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		B81B2A3D2A91342C0066AB0E /* MyViewBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewBox.swift; sourceTree = "<group>"; };
+		B81B2A3F2A9135CE0066AB0E /* ImojiCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImojiCircle.swift; sourceTree = "<group>"; };
 		B84948A12A90D5A00013E150 /* RecommendBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendBannerView.swift; sourceTree = "<group>"; };
 		B88387A82A90801C007633B4 /* TOBID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOBID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B88387AB2A90801C007633B4 /* TOBIDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOBIDApp.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 				B88387C72A90955D007633B4 /* MapView.swift */,
 				B84948A12A90D5A00013E150 /* RecommendBannerView.swift */,
 				B81B2A3B2A912F340066AB0E /* MyButton.swift */,
+				B81B2A3D2A91342C0066AB0E /* MyViewBox.swift */,
+				B81B2A3F2A9135CE0066AB0E /* ImojiCircle.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -192,11 +198,13 @@
 				B88387BD2A9084CA007633B4 /* MyPageView.swift in Sources */,
 				B84948A22A90D5A00013E150 /* RecommendBannerView.swift in Sources */,
 				B88387AE2A90801C007633B4 /* ContentView.swift in Sources */,
+				B81B2A3E2A91342C0066AB0E /* MyViewBox.swift in Sources */,
 				B88387BB2A9084C2007633B4 /* MainView.swift in Sources */,
 				B81B2A3A2A9117D80066AB0E /* ItineraryRegisterView.swift in Sources */,
 				B88387C22A908D92007633B4 /* RoleSelectionView.swift in Sources */,
 				B81B2A3C2A912F340066AB0E /* MyButton.swift in Sources */,
 				B88387AC2A90801C007633B4 /* TOBIDApp.swift in Sources */,
+				B81B2A402A9135CE0066AB0E /* ImojiCircle.swift in Sources */,
 				B88387CC2A90B5BD007633B4 /* UnityView.swift in Sources */,
 				B88387C02A908D2B007633B4 /* MainTabView.swift in Sources */,
 			);

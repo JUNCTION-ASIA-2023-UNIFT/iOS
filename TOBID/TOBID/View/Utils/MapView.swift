@@ -28,6 +28,9 @@ struct MapView: View {
     
     // 지도 중심점
     @State private var region = MKCoordinateRegion()
+    // 선택된 장소 인덱스
+    @State var focusedPlaceIdx = -1
+    @State var settedPlaceIdx = []
     // 마커를 표시할 장소들
     @State private var places = [
         // 자갈치시장
@@ -63,7 +66,6 @@ struct MapView: View {
     ]
     
     var body: some View {
-        
             Map(coordinateRegion: $region, annotationItems: places) { item in
     //            MapMarker(coordinate: item.location, tint: item.isRecommended ? Color("Primary") : .white)
                 MapAnnotation(coordinate: item.location, anchorPoint: CGPoint(x: 0.5, y: 1)) {
@@ -78,6 +80,9 @@ struct MapView: View {
                                 .foregroundColor(Color("Primary"))
                         }
                         .frame(width: 40, height: 40) // 원의 크기 조정
+                    }
+                    .onTapGesture {
+                        print("sfdsfdfsdf")
                     }
                 }
             }
