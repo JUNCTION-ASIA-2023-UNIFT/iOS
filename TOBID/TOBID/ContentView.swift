@@ -14,15 +14,15 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             MainView()
                 .tabItem {
-                    Image(systemName: "1.circle")
-                    Text("First Tab")
+                    Image(systemName: "flag.fill")
+                    Text("내 루트")
                 }
                 .tag(0)
             
             ProfileView()
                 .tabItem {
-                    Image(systemName: "2.circle")
-                    Text("Second Tab")
+                    Image(systemName: "person.fill")
+                    Text("마이페이지")
                 }
                 .tag(1)
         }
