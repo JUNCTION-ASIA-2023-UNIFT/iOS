@@ -18,8 +18,9 @@ import SwiftUI
  */
 struct Place: Identifiable {
     var id: UUID = UUID()
+    var name: String
     var location: CLLocationCoordinate2D
-    var color: Color
+    var isRecommended = false
 }
 
 struct MapView: View {
@@ -31,34 +32,50 @@ struct MapView: View {
     @State private var places = [
         // 자갈치시장
         Place(
+            name: "자갈치시장",
             location: CLLocationCoordinate2D(latitude: 35.096806, longitude: 129.030638),
-            color: Color.blue
+            isRecommended: false
         ),
         // 용궁사
         Place(
+            name: "용궁사",
             location: CLLocationCoordinate2D(latitude: 35.235810, longitude: 129.093020),
-            color: Color.blue
+            isRecommended: false
         ),
         // 해운대 해수욕장
         Place(
+            name: "해운대 해수욕장",
             location: CLLocationCoordinate2D(latitude: 35.158766, longitude: 129.160168),
-            color: Color.blue
+            isRecommended: true
         ),
         // 기장 해녀촌
         Place(
+            name: "기장 해녀촌",
             location: CLLocationCoordinate2D(latitude: 35.218529, longitude: 129.228094),
-            color: Color.blue
+            isRecommended: true
         ),
         // 전포 카페거리
         Place(
+            name: "전포 카페거리",
             location: CLLocationCoordinate2D(latitude: 35.155542, longitude: 129.063820),
-            color: Color.blue
+            isRecommended: true
         )
     ]
     
     var body: some View {
         Map(coordinateRegion: $region, annotationItems: places) { item in
-            MapMarker(coordinate: item.location, tint: item.color)
+//            MapMarker(coordinate: item.location, tint: item.isRecommended ? Color("Primary") : .white)
+            MapAnnotation(coordinate: item.location) {
+                ZStack {
+                    Circle()
+                        .foregroundColor(item.isRecommended ? Color("MarkerBlue") : .white)
+                        .opacity(item.isRecommended ? 0.5 : 0.8)
+                    Circle()
+                        .stroke(style: StrokeStyle(lineWidth: 3, dash: [5]))
+                        .foregroundColor(Color("Primary"))
+                        .frame(width: 40, height: 40) // 원의 크기 조정
+                }
+            }
         }
         .onAppear {
             setRegion(coordinate)
