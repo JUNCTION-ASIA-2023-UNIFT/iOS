@@ -12,7 +12,7 @@ struct BidderListTob3View: View {
         VStack(alignment: .leading, spacing: 0) {
             
             HStack(spacing: 0) {
-                Text("현재 가장 낮은 가격에 \n입찰하신 기사님들이에요.")
+                Text("These are the drivers\nwho bid at the lowest price at the moment.")
                     .font(.system(size: 18))
                 .padding(.bottom, 16)
                 Image("coin")

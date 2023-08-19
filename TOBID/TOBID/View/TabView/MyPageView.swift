@@ -86,7 +86,7 @@ struct BidListArea: View {
                 }
                 .padding(.bottom, 15)
                 
-                Text("입찰 현황이 없어요.")
+                Text("There's no bidding status.")
             }
         }
         

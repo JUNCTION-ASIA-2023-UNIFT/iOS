@@ -10,7 +10,7 @@ import SwiftUI
 struct CourseListView: View {
     var body: some View {
         VStack(alignment: .leading) {
-            Text("나의 코스 내역")
+            Text("My course history")
                 .font(.system(size: 28))
                 .padding(.bottom, 23)
             Rectangle()
