@@ -15,6 +15,7 @@
 		B88387BD2A9084CA007633B4 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88387BC2A9084CA007633B4 /* MyPageView.swift */; };
 		B88387C02A908D2B007633B4 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88387BF2A908D2B007633B4 /* MainTabView.swift */; };
 		B88387C22A908D92007633B4 /* RoleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88387C12A908D92007633B4 /* RoleSelectionView.swift */; };
+		B88387C82A90955D007633B4 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88387C72A90955D007633B4 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B88387BC2A9084CA007633B4 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		B88387BF2A908D2B007633B4 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		B88387C12A908D92007633B4 /* RoleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionView.swift; sourceTree = "<group>"; };
+		B88387C72A90955D007633B4 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				B88387BE2A908B9B007633B4 /* TabView */,
+				B88387C62A909551007633B4 /* Utils */,
 				B88387BF2A908D2B007633B4 /* MainTabView.swift */,
 				B88387C12A908D92007633B4 /* RoleSelectionView.swift */,
 			);
@@ -93,6 +96,14 @@
 				B88387BC2A9084CA007633B4 /* MyPageView.swift */,
 			);
 			path = TabView;
+			sourceTree = "<group>";
+		};
+		B88387C62A909551007633B4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B88387C72A90955D007633B4 /* MapView.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B88387C82A90955D007633B4 /* MapView.swift in Sources */,
 				B88387BD2A9084CA007633B4 /* MyPageView.swift in Sources */,
 				B88387AE2A90801C007633B4 /* ContentView.swift in Sources */,
 				B88387BB2A9084C2007633B4 /* MainView.swift in Sources */,
