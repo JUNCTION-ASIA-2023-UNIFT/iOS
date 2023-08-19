@@ -10,25 +10,30 @@ import SwiftUI
 // MARK: - 마이페이지 뷰
 struct MyPageView: View {
     var body: some View {
-        ScrollView() {
-            VStack(spacing:0) {
-                Spacer()
-                Rectangle()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.black)
-                RecommendBannerView(headline: "나의 입찰 현황")
-                    .padding(.top, 31)
-                BidderListTob3View()
-                    .padding(.top, 34)
-                CourseListView()
-                    .padding(.top, 59)
-                Spacer()
+        NavigationStack {
+            ScrollView() {
+                VStack(spacing:0) {
+                    Spacer()
+                    Rectangle()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.black)
+                    RecommendBannerView(headline: "나의 입찰 현황")
+                        .padding(.top, 31)
+                    BidderListTob3View()
+                        .padding(.top, 34)
+                    CourseListView()
+                        .padding(.top, 59)
+                    Spacer()
+                }
+                .frame(width: deviceWidth)
+                .padding(18)
+                
             }
-            .frame(width: deviceWidth)
-            .padding(18)
+            .background(Color("BGray"))
         }
-        .background(Color("BGray"))
+        
     }
+        
 }
 
 struct BidListArea: View {
