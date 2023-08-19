@@ -16,6 +16,7 @@
 		B88387C02A908D2B007633B4 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88387BF2A908D2B007633B4 /* MainTabView.swift */; };
 		B88387C22A908D92007633B4 /* RoleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88387C12A908D92007633B4 /* RoleSelectionView.swift */; };
 		B88387C82A90955D007633B4 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88387C72A90955D007633B4 /* MapView.swift */; };
+		B88387CC2A90B5BD007633B4 /* UnityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88387CB2A90B5BD007633B4 /* UnityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B88387BF2A908D2B007633B4 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		B88387C12A908D92007633B4 /* RoleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionView.swift; sourceTree = "<group>"; };
 		B88387C72A90955D007633B4 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		B88387CB2A90B5BD007633B4 /* UnityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				B88387C62A909551007633B4 /* Utils */,
 				B88387BF2A908D2B007633B4 /* MainTabView.swift */,
 				B88387C12A908D92007633B4 /* RoleSelectionView.swift */,
+				B88387CB2A90B5BD007633B4 /* UnityView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				B88387BB2A9084C2007633B4 /* MainView.swift in Sources */,
 				B88387C22A908D92007633B4 /* RoleSelectionView.swift in Sources */,
 				B88387AC2A90801C007633B4 /* TOBIDApp.swift in Sources */,
+				B88387CC2A90B5BD007633B4 /* UnityView.swift in Sources */,
 				B88387C02A908D2B007633B4 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
