@@ -16,22 +16,25 @@ struct MainView: View {
     var body: some View {
         VStack {
             VStack {
-                Spacer()
                 Rectangle()
                     .frame(width: 50, height: 50)
                     .foregroundColor(.black)
-                Spacer()
                 RecommendBannerView(headline: "이런 코스는 어떠세요?")
             }
             .frame(width: deviceWidth, height: deviceHeight*0.300)
-            .padding(18)
-            .background(Color("BGray"))
+            .padding(.top, -100)
             
-            MapView(coordinate: CLLocationCoordinate2D(latitude: 35.210871, longitude: 129.068713))
-                .padding(.horizontal, 15)
-                .padding(.bottom, 144)
+            NavigationLink(destination: ItineraryRegisterView()) {
+                MapView(coordinate: CLLocationCoordinate2D(latitude: 35.210871, longitude: 129.068713))
+                    .frame(height: 400)
+                    .cornerRadius(10)
+            }
+            .padding(.horizontal, 15)
+            .shadow(color: Color.black.opacity(0.25), radius: 10, x: 0, y: 4)
         }
+        .ignoresSafeArea()
         .frame(width: deviceWidth, height: 761)
+        .background(Color("BGray"))
     }
 }
 

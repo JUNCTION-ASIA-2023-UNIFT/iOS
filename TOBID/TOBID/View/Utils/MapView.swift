@@ -63,25 +63,27 @@ struct MapView: View {
     ]
     
     var body: some View {
-        Map(coordinateRegion: $region, annotationItems: places) { item in
-//            MapMarker(coordinate: item.location, tint: item.isRecommended ? Color("Primary") : .white)
-            MapAnnotation(coordinate: item.location) {
-                ZStack {
-                    Circle()
-                        .foregroundColor(item.isRecommended ? Color("MarkerBlue") : .white)
-                        .opacity(item.isRecommended ? 0.5 : 0.8)
-                    Circle()
-                        .stroke(style: StrokeStyle(lineWidth: 3, dash: [5]))
-                        .foregroundColor(Color("Primary"))
+        
+            Map(coordinateRegion: $region, annotationItems: places) { item in
+    //            MapMarker(coordinate: item.location, tint: item.isRecommended ? Color("Primary") : .white)
+                MapAnnotation(coordinate: item.location, anchorPoint: CGPoint(x: 0.5, y: 1)) {
+                    VStack {
+                        Text(item.name).font(.caption)
+                        ZStack {
+                            Circle()
+                                .foregroundColor(item.isRecommended ? Color("MarkerBlue") : .white)
+                                .opacity(item.isRecommended ? 0.5 : 0.8)
+                            Circle()
+                                .stroke(style: StrokeStyle(lineWidth: 3, dash: [5]))
+                                .foregroundColor(Color("Primary"))
+                        }
                         .frame(width: 40, height: 40) // 원의 크기 조정
+                    }
                 }
             }
-        }
-        .onAppear {
-            setRegion(coordinate)
-        }
-        .frame(width: 360, height: 400)
-        .background(Color("BGray"))
+            .onAppear {
+                setRegion(coordinate)
+            }
     }
     
     private func setRegion(_ coordinate: CLLocationCoordinate2D) {
