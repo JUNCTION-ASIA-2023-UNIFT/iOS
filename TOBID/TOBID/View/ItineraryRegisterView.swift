@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ItineraryRegisterView: View {
     @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var recommendPlaces = RecommendPlaces.shared
     
     @State var isShowingDateModal: Bool = true
     @State var isShowingBackModal: Bool = false
@@ -29,14 +30,35 @@ struct ItineraryRegisterView: View {
                 ZStack {
                     MyViewBox()
                         .frame(height: deviceHeight*0.236)
-                    VStack {
-                        ImojiCircle(imoji: "FaceLaugh")
-                        Text("Please tell me the first course.")
+                    if recommendPlaces.selectedPlaceIdx == -1 {
+                        VStack {
+                            ImojiCircle(imoji: "FaceLaugh")
+                            Text("Please tell me the first course.")
+                        }
+                    } else {
+                        VStack(alignment: .leading) {
+                            Text(recommendPlaces.places[recommendPlaces.selectedPlaceIdx].name)
+                                .font(.system(size: 20))
+                                .foregroundColor(Color("Primary"))
+                            Divider()
+                            VStack(alignment: .leading) {
+                                Text(recommendPlaces.places[recommendPlaces.selectedPlaceIdx].description)
+                                    .font(.system(size: 16))
+                            }
+                        }
+                        .frame(width: deviceWidth*0.82)
                     }
                 }
                 .padding(.bottom, 33)
                 
-                MyButton(title: "I'm planning to start from here.", enabled: false, width: 340)
+                if recommendPlaces.selectedPlaceIdx == -1 {
+                    MyButton(title: "I'm planning to start from here.", enabled: false, width: 340)
+                } else {
+                    MyButton(title: "I'm planning to start from here.", enabled: true, width: 340)
+                        .onTapGesture {
+                            print("시간 선택")
+                        }
+                }
             }
         }
         // 여행 시작 날짜 입력 모달
