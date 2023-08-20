@@ -12,7 +12,7 @@ struct MyPageView: View {
     var body: some View {
         NavigationView {
             ScrollView() {
-                VStack(spacing:0) {
+                VStack {
                     Image("logo")
                     RecommendBannerView(headline: "My bidding status")
                         .padding(.top, 31)

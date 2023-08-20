@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct MyPageDetailView: View {
+    @Environment(\.presentationMode) var presentationMode
     @Binding var detailViewActive: Bool
     
     var body: some View {
-        VStack(spacing:0) {
+        VStack {
             RecommendBannerView(headline: "")
                 .padding(.top, 63)
             Rectangle()
@@ -27,13 +28,25 @@ struct MyPageDetailView: View {
             Spacer()
             Button {
             } label: {
-              Text("Pay at the lowest price")
+                MyButton(title: "Pay at the lowest price", enabled: true, width: 340)
             }
-            .background(Color("AccentColor"))
-            .frame(width: 340)
+            Spacer()
         }
         .frame(width: deviceWidth, height: 761)
         .background(Color("BGray"))
+        .navigationBarBackButtonHidden(true)
+        .navigationTitle("My bidding status")
+        // 커스텀 백버튼
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Image(systemName: "chevron.backward").bold()
+                }
+
+            }
+        }
         
         
     }
@@ -90,3 +103,9 @@ struct BidListAll: View {
 
     }
 }
+
+//struct MyPageDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MyPageDetailView()
+//    }
+//}
