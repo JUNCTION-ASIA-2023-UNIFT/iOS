@@ -13,21 +13,48 @@ struct RoleSelectionView: View {
         NavigationView {
             VStack {
                 Spacer()
+                Image("logo")
+                    .resizable()
+                    .frame(width: 40, height: 44)
+//                    .padding(.top, 7)
+                Spacer()
                 
-                NavigationLink(destination: MainTabView()) {
-                    Text("기사")
-                        .font(.largeTitle)
+                Text("Who are you?")
+                    .font(.system(size: 28))
+                    .padding(.bottom, 15)
+                Text("Please select a role.")
+                    .font(.system(size: 18))
+                    .foregroundColor(Color("Gray"))
+                    .padding(.bottom, 90)
+
+                
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: MainTabView()) {
+                        VStack {
+                            ImojiCircle(imoji: "FaceSungla", circleColor: Color("White"), circleSize: 100, imojiSize: 60)
+                            Text("Taxi driver")
+                                .font(.system(size: 20))
+                                .foregroundColor(.black)
+                        }
+                    }
+                    Spacer()
+                    NavigationLink(destination: MainTabView()) {
+                        VStack {
+                            ImojiCircle(imoji: "FaceSmile", circleColor: Color("White"), circleSize: 100, imojiSize: 60)
+                            Text("Passenger")
+                                .font(.system(size: 20))
+                                .foregroundColor(.black)
+                        }
+                    }
+                    Spacer()
                 }
                 
                 Spacer()
-                
-                NavigationLink(destination: MainTabView()) {
-                    Text("관광객")
-                        .font(.largeTitle)
-                }
-                
+                Spacer()
                 Spacer()
             }
+            .background(Color("BGray"))
             .frame(width: deviceWidth, height: deviceHeight)
         }
     }

@@ -9,14 +9,17 @@ import SwiftUI
 
 struct ImojiCircle: View {
     let imoji: String
+    var circleColor: Color = Color("BGray")
+    var circleSize: CGFloat = 60
+    var imojiSize: CGFloat = 40
     
     var body: some View {
         ZStack {
             Circle()
-                .frame(width: 60, height: 60)
-                .foregroundColor(Color("BGray"))
+                .frame(width: circleSize, height: circleSize)
+                .foregroundColor(circleColor)
             Image(imoji)
-                .frame(width: 40, height: 40)
+                .frame(width: imojiSize, height: imojiSize)
         }
     }
 }
