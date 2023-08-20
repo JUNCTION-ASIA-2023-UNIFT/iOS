@@ -13,25 +13,35 @@ let deviceHeight = UIScreen.main.bounds.height
 
 // MARK: - 메인(내 코스) 뷰
 struct MainView: View {
+    @ObservedObject var recommendPlaces = RecommendPlaces.shared
+    
     var body: some View {
         VStack {
             VStack {
-                Spacer()
-                Rectangle()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.black)
-                Spacer()
-                RecommendBannerView(headline: "이런 코스는 어떠세요?")
+                Image("logo")
+                    .resizable()
+                    .frame(width: 40, height: 44)
+                    .padding(.top, 7)
+                RecommendBannerView(headline: "How about these course?")
             }
             .frame(width: deviceWidth, height: deviceHeight*0.300)
-            .padding(18)
-            .background(Color("BGray"))
+            .padding(.top, -100)
             
-            MapView(coordinate: CLLocationCoordinate2D(latitude: 35.210871, longitude: 129.068713))
-                .padding(.horizontal, 15)
-                .padding(.bottom, 144)
+            NavigationLink(destination: ItineraryRegisterView()) {
+                MapView(coordinate: CLLocationCoordinate2D(latitude: 35.210871, longitude: 129.068713))
+                    .frame(height: 400)
+                    .cornerRadius(10)
+                    .contentShape(Rectangle()) // Make the whole view tappable
+            }
+            .padding(.horizontal, 15)
+            .shadow(color: Color.black.opacity(0.25), radius: 10, x: 0, y: 4)
         }
+        .onAppear {
+            recommendPlaces.selectedPlaceIdx = -1
+        }
+        .ignoresSafeArea()
         .frame(width: deviceWidth, height: 761)
+        .background(Color("BGray"))
     }
 }
 
