@@ -13,6 +13,16 @@ struct MyButton: View {
     let width: CGFloat
     
     var body: some View {
+//        Button {
+//            
+//        } label: {
+//            Text(title)
+//                .foregroundColor(.white)
+//                .frame(width: width, height: 55)
+//                .background(enabled ? Color("Primary") : Color("Buttongray"))
+//                .cornerRadius(15)
+//        }
+//
         ZStack {
             if enabled {
                 Color("Primary")

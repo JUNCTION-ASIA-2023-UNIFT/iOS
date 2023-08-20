@@ -18,10 +18,11 @@ struct MainView: View {
     var body: some View {
         VStack {
             VStack {
-                Rectangle()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.black)
-                RecommendBannerView(headline: "이런 코스는 어떠세요?")
+                Image("logo")
+                    .resizable()
+                    .frame(width: 40, height: 44)
+                    .padding(.top, 7)
+                RecommendBannerView(headline: "How about these course?")
             }
             .frame(width: deviceWidth, height: deviceHeight*0.300)
             .padding(.top, -100)

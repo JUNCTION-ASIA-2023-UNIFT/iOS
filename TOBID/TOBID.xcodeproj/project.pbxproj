@@ -31,6 +31,7 @@
 		B81B2A3D2A91342C0066AB0E /* MyViewBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewBox.swift; sourceTree = "<group>"; };
 		B81B2A3F2A9135CE0066AB0E /* ImojiCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImojiCircle.swift; sourceTree = "<group>"; };
 		B81B2A422A9154B50066AB0E /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		B81B2A452A919E550066AB0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B84948A12A90D5A00013E150 /* RecommendBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendBannerView.swift; sourceTree = "<group>"; };
 		B88387A82A90801C007633B4 /* TOBID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOBID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B88387AB2A90801C007633B4 /* TOBIDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOBIDApp.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		B88387AA2A90801C007633B4 /* TOBID */ = {
 			isa = PBXGroup;
 			children = (
+				B81B2A452A919E550066AB0E /* Info.plist */,
 				B88387B92A90849B007633B4 /* View */,
 				B88387AB2A90801C007633B4 /* TOBIDApp.swift */,
 				B88387AD2A90801C007633B4 /* ContentView.swift */,
@@ -350,9 +352,9 @@
 				DEVELOPMENT_TEAM = RCM87YWJ79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TOBID/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -379,9 +381,9 @@
 				DEVELOPMENT_TEAM = RCM87YWJ79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TOBID/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

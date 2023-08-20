@@ -14,7 +14,9 @@ struct ItineraryRegisterView: View {
     
     @State var isShowingDateModal: Bool = true
     @State var isShowingBackModal: Bool = false
+    @State var isShowingTimeModal: Bool = false
     @State private var selectedDate = Date()
+    @State private var selectedTime = Date()
     
     var body: some View {
         ZStack {
@@ -56,7 +58,7 @@ struct ItineraryRegisterView: View {
                 } else {
                     MyButton(title: "I'm planning to start from here.", enabled: true, width: 340)
                         .onTapGesture {
-                            print("시간 선택")
+                            isShowingTimeModal = true
                         }
                 }
             }
@@ -111,6 +113,30 @@ struct ItineraryRegisterView: View {
             }
             .padding(26)
             .presentationDetents([.height(360)])
+            .presentationCornerRadius(30)
+        }
+        // 택시 탑승 시간 입력 모달
+        .sheet(isPresented: $isShowingTimeModal) {
+            VStack {
+                VStack(alignment: .leading) {
+                    Text("Please tell me.\nThe estimated time of departure.")
+                        .font(.system(size: 20))
+                    Text("The driver will arrive on time.")
+                        .font(.system(size: 16))
+                        .foregroundColor(Color("DarkGray"))
+                    DatePicker("Enter departure time.", selection: $selectedTime, displayedComponents: .hourAndMinute)
+                        .datePickerStyle(WheelDatePickerStyle())
+                        .labelsHidden()
+                }
+                HStack {
+                    MyButton(title: "Next", enabled: true, width: 340)
+                        .onTapGesture {
+                            isShowingTimeModal = false
+                        }
+                }
+            }
+            .padding(26)
+            .presentationDetents([.height(450)])
             .presentationCornerRadius(30)
         }
         .navigationBarBackButtonHidden(true)
