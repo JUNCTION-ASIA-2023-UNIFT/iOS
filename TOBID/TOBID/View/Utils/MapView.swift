@@ -11,10 +11,15 @@ import SwiftUI
 struct MapView: View {
     @ObservedObject var recommendPlaces = RecommendPlaces.shared
     
-    var coordinate: CLLocationCoordinate2D
-    
     // 지도 중심점
-    @State private var region = MKCoordinateRegion()
+    @State var region: MKCoordinateRegion
+    
+    init(coordinate: CLLocationCoordinate2D) {
+        region = MKCoordinateRegion(
+            center: coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)
+        )
+    }
     
     
     var body: some View {
@@ -69,17 +74,6 @@ struct MapView: View {
                     }
                 }
             }
-            .onAppear {
-                setRegion(coordinate)
-                print("Region setting completed")
-            }
-    }
-    
-    private func setRegion(_ coordinate: CLLocationCoordinate2D) {
-        region = MKCoordinateRegion(
-            center: coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
-        print(region)
     }
 }
 

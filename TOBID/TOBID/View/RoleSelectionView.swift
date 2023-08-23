@@ -32,7 +32,7 @@ struct RoleSelectionView: View {
                     Spacer()
                     NavigationLink(destination: MainTabView()) {
                         VStack {
-                            ImojiCircle(imoji: "FaceSungla", circleColor: Color("White"), circleSize: 100, imojiSize: 60)
+                            ImojiCircle(imoji: "FaceSungla60", circleColor: Color("White"), circleSize: 100, imojiSize: 60)
                             Text("Taxi driver")
                                 .font(.system(size: 20))
                                 .foregroundColor(.black)
@@ -41,7 +41,7 @@ struct RoleSelectionView: View {
                     Spacer()
                     NavigationLink(destination: MainTabView()) {
                         VStack {
-                            ImojiCircle(imoji: "FaceSmile", circleColor: Color("White"), circleSize: 100, imojiSize: 60)
+                            ImojiCircle(imoji: "FaceSmile60", circleColor: Color("White"), circleSize: 100, imojiSize: 60)
                             Text("Passenger")
                                 .font(.system(size: 20))
                                 .foregroundColor(.black)

@@ -12,7 +12,8 @@ struct TOBIDApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            RoleSelectionView()
+//            RoleSelectionView()
+            SplashView()
         }
     }
 }
